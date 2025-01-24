@@ -11,7 +11,7 @@
         }
 
         header {
-            background-color: #941919;
+            background-color: palevioletred;
             color: #fff;
             text-align: center;
             padding: 2rem 0;
@@ -28,11 +28,11 @@
         .profile-picture {
             width: 100px; /* Adjust the size as needed */
             height: 100px;
-            transition: width 10s;
+            transition: width 50s;
             border-radius: 75%; /* Create a circular shape */
             object-fit: cover; /* To ensure the image fills the circular area */
             position: absolute; /* Add this */
-            top: 75px; /* Adjust top position as needed */
+            top: 30px; /* Adjust top position as needed */
             left: 75px; /* Adjust left position as needed */
         }
 
@@ -66,20 +66,7 @@
             text-align: justify;
         }
 
-        .download-button {
-            background-color: #333;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 20px;
-            display: inline-block;
-            margin-top: 10px;
-            align-self: center;
-        }
-
-        .download-button:hover {
-            background-color: #555;
-        }
+        
 
         footer {
             text-align: center;
@@ -92,33 +79,57 @@
             list-style-type: disc;
             padding-left: 20px;
         }
+	    .marquee {
+            width: 100%; /* Full width */
+            overflow: hidden; /* Hide overflowing text */
+            white-space: nowrap; /* Prevent text from wrapping */
+            box-sizing: border-box;
+            background-color: blue;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .marquee span {
+            display: inline-block;
+            padding-left: 100%; /* Start off-screen */
+            animation: marquee 10s linear infinite;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <!-- Add your profile picture here -->
-            <img src="./Capture.PNG" alt="Your Profile Picture" class="profile-picture">
+            <img src="./images.jpg" alt="Your Profile Picture" class="profile-picture">
+             </div>
             <h1>VIJAYALAKSHMI B</h1>
-		<p style="position: relative; transform: translate(50px, 20px);">VIJAYALAKSHMI B</p>
-            <p>ASSISTANT PROFESSOR</p>
-        </div>
+				 <div class="marquee">
+        <span>Mrs.VIJAYALAKSHMI B M.C.A.,M.Phil., ASSISTANT PROFESSOR,  DEPARTMENT OF COMPUTER SCIENCE, K.C.S. KASI NADAR COLLEGE OF ARTS & SCIENCE, CHENNAI-21.</span>
+                   </div>
+        
     </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#education">Education</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#subjects handled">Subjects Handled</a></li>
             <li><a href="#achievements">Achievements</a></li>
-            <li><a href="#resume">Resume</a></li>
+        
            
         </ul>
     </nav>
 
     <section id="about">
         <div class="section-content">
-            <h2>About Me</h2>
+            <h2>About</h2>
             <p>Assistant Professor of K.C.S. KASI NADAR COLLEGE OF ARTS & SCIENCE With 7 years of experience.</p>
 	    <p>To be a part of Educational Institution who believe in imparting knowledge through theoretical as well as practical ways in accordance to its students.</p>
         </div>
@@ -132,9 +143,9 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="Subjects Handled">
         <div class="section-content">
-            <h2>Skills</h2>
+            <h2>Subjects Handled</h2>
             <ul>
                 <li>Python</li>
                 <li>C++</li>
@@ -157,16 +168,7 @@
         </div>
     </section>
 
-    <section id="resume">
     
-        <div class="section-content">
-            <center>
-            <h2>Resume</h2>
-            <a href="./mycv.pdf" target="_blank" class="download-button">Download CV</a>
-        </center>
-        </div>
-        
-    </section>
 
     <footer>
         <p>&copy; VIJAYALAKSHMI B</p>
